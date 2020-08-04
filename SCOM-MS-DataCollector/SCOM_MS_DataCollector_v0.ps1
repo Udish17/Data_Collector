@@ -241,7 +241,6 @@ Function Export-ResourcePoolMember(){
         Write-Host "`nExporting Resource Pool Membership.." -ForegroundColor Cyan
         Write-Log "Info" "Exporting Resource Pool Membership"
         $ResourcePools=Get-SCOMResourcePool  # -DisplayName "All Management Servers Resource Pool"
- 
         foreach ($ResourcePool in $ResourcePools)
         {
             $members=$ResourcePool | Select Members
