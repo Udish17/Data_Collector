@@ -196,7 +196,7 @@ Function Export-SCOMInfraInfo(){
             ManagementServers   = $SCOMMS.displayname
             Gateway             = $Gateway.displayname
             WindowsComputer     = $Windowsagent.displayname
-            UNIXAgent           = $SCXAgent.displayname
+            UNIXAgent           = $SCXAgent.Name
             NetworkDevice       = $NetworkDevice.displayname
             AgentlessComputer   = $agentlesscomputer.displayname
             ManagementPack      = $ManagementPacks.displayname
