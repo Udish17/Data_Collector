@@ -375,5 +375,3 @@ Write-Host "`nScript ended.." -ForegroundColor Green
 $sw.Stop()
 Write-Host "`nTime to complele script (in seconds) : $($sw.Elapsed.Seconds)" -ForegroundColor Cyan
 Write-Log "Info" "Time to complele script : $($sw.Elapsed.Seconds)"
-
- 
