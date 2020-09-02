@@ -3,6 +3,10 @@
 #########                            Author: Udishman Mudiar (Udish)                                     ##########
 #########                               Version 1.0                                                      ##########
 ###################################################################################################################
+######################### Fixes ###################################################################################
+########## 2/9/2020 - An unknown character was introduced in the line 244. Removed the trailing spaces  ###########
+########## and new lines ##########################################################################################
+###################################################################################################################
 
 Write-Host "Script started.." -ForegroundColor Green
 $sw = [Diagnostics.Stopwatch]::StartNew()
@@ -240,8 +244,7 @@ Function Export-ResourcePoolMember(){
     {
         Write-Host "`nExporting Resource Pool Membership.." -ForegroundColor Cyan
         Write-Log "Info" "Exporting Resource Pool Membership"
-        $ResourcePools=Get-SCOMResourcePool  # -DisplayName "All Management Servers Resource Pool"
- 
+        $ResourcePools=Get-SCOMResourcePool
         foreach ($ResourcePool in $ResourcePools)
         {
             $members=$ResourcePool | Select Members
