@@ -4,8 +4,9 @@
 #########                               Version 1.0                                                      ##########
 ###################################################################################################################
 ######################### Fixes ###################################################################################
-########## 2/9/2020 - An unknown character was introduced in the line 244. Removed the trailing spaces  ###########
-########## and new lines ##########################################################################################
+########## 2/9/2020 - An unknown character was introduced in the line 244 and 382.                      ###########
+########## Removed the trailing spacesand new lines ###############################################################
+########## 2/9/2020 - The SCX agents were not outputted. Fixed the property to use Name ###########################
 ###################################################################################################################
 
 Write-Host "Script started.." -ForegroundColor Green
@@ -200,7 +201,7 @@ Function Export-SCOMInfraInfo(){
             ManagementServers   = $SCOMMS.displayname
             Gateway             = $Gateway.displayname
             WindowsComputer     = $Windowsagent.displayname
-            UNIXAgent           = $SCXAgent.displayname
+            UNIXAgent           = $SCXAgent.name
             NetworkDevice       = $NetworkDevice.displayname
             AgentlessComputer   = $agentlesscomputer.displayname
             ManagementPack      = $ManagementPacks.displayname
@@ -379,5 +380,3 @@ Write-Host "`nScript ended.." -ForegroundColor Green
 $sw.Stop()
 Write-Host "`nTime to complele script (in seconds) : $($sw.Elapsed.Seconds)" -ForegroundColor Cyan
 Write-Log "Info" "Time to complele script : $($sw.Elapsed.Seconds)"
-
- 
