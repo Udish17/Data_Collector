@@ -9,9 +9,11 @@ This is a repository for System Center Data Collector scripts
 4. Navigate to the path where the script is copied and run it.
 
 On Management Servers
+
 .\SCOM_MS_DataCollector_v0.ps1 -IsManagementServer True
 
 On Agents
+
 .\SCOM_MS_DataCollector_v0.ps1 -IsManagementServer False
 
 5. Once the script is complete a zipped file with all the data will be created in C:\Temp. Shared the data with Microsoft Support Professional.
